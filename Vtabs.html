@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body, html{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        background-color: #c0c0c0;
+        font-size: 1.6rem;
+        width: 150px;
+    }
+    .name{
+        border: solid 1.5px black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .name:hover{
+        background-color: #969696;
+    }
+    .inside{
+        border: solid 1.5px black;
+        font-size: 1.4rem;
+        height: 1.57in;
+        position: absolute;
+        top: 30%;
+        left: 1.55in;
+        display: none;
+    }
+    #London, #Paris, #Tokyo{
+        width: 350px;
+    }
+</style>
+<body>
+    <h1>Vertical Tabs</h1>
+    <div class="box">
+        <div id="one" class="name" onclick="show('London')">London</div>
+        <div id="two" class="name" onclick="show('Paris')">Paris</div>
+        <div id="three" class="name" onclick="show('Tokyo')">Tokyo</div>
+    </div>
+    <div class="content">
+        <div id="London" class="inside">
+            <h2>London</h2>London is the capital of England.</div>
+        <div id="Paris" class="inside"><h2>Paris</h2>Paris is the capital of France.</div>
+        <div id="Tokyo" class="inside"><h2>Tokyo</h2>Tokyo is the capital of Japan.</div>
+    </div>
+    <script>
+        function show(city){
+            var a, content;
+            content=document.getElementsByClassName("inside");
+            for(a=0;a<content.length;++a){
+                content[a].style.display='none';
+            }
+            document.getElementById(city).style.display='block';
+        }
+    </script>
+</body>
+</html>

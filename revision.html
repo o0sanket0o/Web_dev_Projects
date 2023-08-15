@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html{
+        width: 100%;
+        height: 100%;
+    }
+    .point{
+        cursor: pointer;
+        position: absolute;
+        left: 40%;
+        top: 20%;
+    }
+    .line{
+        background-color: black;
+        height: 5px;
+        width: 35px;
+        margin: 5px;
+    }
+</style>
+<body>
+    <div class="point">
+        <div id="one" class="line"></div>
+        <div id="two" class="line"></div>
+        <div id="three" class="line"></div>
+    </div>
+</body>
+<script>
+    let a=document.querySelector(".point");
+    a.classList.toggle("")
+</script>
+</html>

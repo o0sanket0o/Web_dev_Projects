@@ -1,0 +1,102 @@
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    color: white;
+    text-decoration: none;
+}
+nav{
+    font-family: 'Open Sans', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    background-color:black;
+    height: 65px;
+    color: white;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    /* To bring the spotify text in center  */
+    font-weight:bolder;
+    font-size: 1.3rem;
+}
+nav ul li{
+    padding-left: 12px;
+    /*or padding: 0 12px; */
+}
+.bottom{
+    background-color: black;
+    height: 130px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    min-height: 75vh;
+    /* 75vh means 75% of height */
+    /* This above thing was done to send the range icon below. How is min hieght related? */
+    background-color: black;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    color: white;
+    width: 70%;
+    margin: 23px auto;
+
+}
+#myBar{
+    width: 80vw;
+}
+.icons{
+    padding-top: 10px;
+    font-size: 30px;
+}
+.image img{
+    height: 700px;
+    border-radius: 10px;
+    padding: 14px;
+}
+.container .image{
+    position: relative;
+    left: 200px;
+}
+
+.f1 img{
+    position: relative;
+    width: 3%;
+    right: 4.8in;
+    bottom: 7in;
+    margin: 2px;
+}
+.s1{
+    background-color: white;
+    color: black;
+    width: 200px;
+    position: relative;
+    left: 0.7in;
+    bottom:9.85in;
+    border-radius: 4px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+}
+.s1 a{
+    position: relative;
+    right: 50px;
+}
