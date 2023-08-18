@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search menu</title>
+
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body, html{
+        width: 100%;
+        height: 100%;
+    }
+    h1{
+        margin: 10px;
+    }
+    h2{
+        font-size: 25px;
+        margin: 10px 5px;
+    }
+    p{
+        margin: 10px;
+    }
+    .complete{
+        display: flex;
+        position: absolute;
+        top: 15%;
+        left: 10px;
+    }
+    .left{
+        background-color: #a7a7a7;
+        height: 63vh;
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .right{
+        background-color: #d4d4d4;
+        width: 25vw;
+        font-size: 18px;
+    }
+    .left .find input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    .things{
+        height: 100%;
+    }
+    .lang{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 12px 5px;
+        width: 100%;
+    }
+    .lang:hover{
+        background-color: #eee;
+    }
+</style>
+<body>
+    <h1>Search Menu</h1>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <div class="complete">
+        <div class="left">
+            <h2>Menu</h2>
+            <div class="find"><input type="search" placeholder="Search.." id="find" onkeyup="findit()"></div>
+            <div class="things">
+                <div id="one" class="lang">HTML</div>
+                <div id="two" class="lang">CSS</div>
+                <div id="three" class="lang">JavaScript</div>
+                <div id="four" class="lang">PHP</div>
+                <div id="five" class="lang">Python</div>
+                <div id="six" class="lang">jQuery</div>
+                <div id="seven" class="lang">SQL</div>
+                <div id="eight" class="lang">Bootstrap</div>
+                <div id="nine" class="lang">Node.js</div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Page content</h2>
+            <p>Start to type for a specific category inside the search bar to "filter" the search options. <br> <br>
+
+                Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text.. <br>
+                <br>
+                Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text.. <br>
+                <br>
+                Some text..</p>
+        </div>
+    </div>
+</body>
+<script>
+    function findit() {
+        var a,b,c,d,e,f,g;
+        a=document.getElementById("find");
+        b=a.value.toUpperCase();
+        c=document.getElementsByClassName("lang");
+        for(d=0;d<c.length;++d){
+            e=c[d];
+            f=e.innerHTML;
+            if(f.toUpperCase().indexOf(b)>-1){
+                e.style.display="";
+            }else{
+                e.style.display="none";
+            }
+        }
+    }
+
+</script>
+</html>

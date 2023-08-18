@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggled radial buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html{
+        width: 100%;
+        height: 100%;
+    }
+    h1{
+        margin: 10px;
+    }
+    .big{
+        position: relative;
+        top: 20%;
+        display: flex;
+        justify-content: center;
+    }
+    .box{
+        background-color: black;
+        margin: 10px;
+        height: 95px;
+        width: 95px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        transition: 0.8s;
+        transform: rotate(45deg);
+        color: wheat;
+    }
+    .box a{
+        width: 100%;
+        height: 100%;
+        color: wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transform: rotate(-45deg);
+    }
+    .big #two.change{
+        translate: 140px 0px;
+    }
+    .big #two.change:hover{
+        opacity: 0.5;
+    }
+    .big #three.change:hover{
+        opacity: 0.5;
+    }
+    .big #four.change:hover{
+        opacity: 0.5;
+    }
+    .big #five.change:hover{
+        opacity: 0.5;
+    }
+    .big #six.change:hover{
+        opacity: 0.5;
+    }
+    .big #seven.change:hover{
+        opacity: 0.5;
+    }
+    .big #eight.change:hover{
+        opacity: 0.5;
+    }
+    .big #nine.change:hover{
+        opacity: 0.5;
+    }
+    .big #three.change{
+        translate: -140px 0px;
+        
+    }
+    .big #four.change{
+        translate: 0px 140px;
+    }
+    .big #five.change{
+        translate: 0px -140px;
+    }
+    .big #six.change{
+        translate: 70px 70px;
+    }
+    .big #seven.change{
+        translate: -70px -70px;
+    }
+    .big #eight.change{
+        translate: 70px -70px;
+    }
+    .big #nine.change{
+        translate: -70px 70px;
+    }
+</style>
+<body>
+    <h1>Toggled radial buttons</h1>
+    <div class="big">
+        <div id="two" class="box"> <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+        <div id="three" class="box"><a href="https://www.discord.com"><i class="fa-brands fa-discord"></i></a></div>
+        <div id="four" class="box"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+        <div id="five" class="box"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
+        <div id="six" class="box"><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a></div>
+        <div id="seven" class="box"><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></div>
+        <div id="eight" class="box"><a href="https://www.gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
+        <div id="nine" class="box"><a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a></div>
+        <div id="one" class="box" onclick="show()"></a><i class="fa-solid fa-link"></i></div>
+    </div>
+
+    <script>
+        function show(){
+            var a=document.getElementsByClassName("box");
+            for(var i=0;i<a.length;++i){
+                a[i].classList.toggle("change");
+            }
+        }
+    </script>
+</body>
+</html>
